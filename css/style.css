@@ -989,7 +989,7 @@ h3 {
 
 /* line 16, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
 .header-area .main-header-area {
-  background: transparent;
+  background-color:#000;
   padding-top: 28px;
 }
 
@@ -1478,7 +1478,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/December/236. Event-02/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+ background-image: url(/img/banner/banner2.jpg)
 }
 
 /* line 4, ../../Arafath/CL/December/236. Event-02/HTML/scss/_slider.scss */
@@ -1598,10 +1598,25 @@ h3 {
   margin-top: 55px;
   margin-bottom: 40px;
 }
+.slider_area .single_slider .slider_text h3 span{
+  font-family: "Monoton";
+  font-size: 122px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color:#FF4533;
+  line-height: 1;
+  margin-top: 55px;
+  margin-bottom: 40px;
+}
 
 @media (max-width: 767px) {
   /* line 65, ../../Arafath/CL/December/236. Event-02/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 20px 0;
+  }
+  .slider_area .single_slider .slider_text h3 span{
     font-size: 30px;
     line-height: 1.2;
     margin: 20px 0;
@@ -1613,11 +1628,17 @@ h3 {
   .slider_area .single_slider .slider_text h3 {
     font-size: 54px;
   }
+  .slider_area .single_slider .slider_text h3 span{
+    font-size: 54px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 65, ../../Arafath/CL/December/236. Event-02/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 {
+    font-size: 100px;
+  }
+  .slider_area .single_slider .slider_text h3 span{
     font-size: 100px;
   }
 }
@@ -2004,6 +2025,12 @@ h3 {
   width: 100%;
 }
 
+@media (min-width: 992px){
+  .about_area .about_thumb .thumb_inner img {
+    width: 70%;
+  }
+}
+
 /* line 48, ../../Arafath/CL/December/236. Event-02/HTML/scss/_about.scss */
 .about_area .about_info h4 {
   font-family: "Anton", sans-serif;
@@ -2307,7 +2334,7 @@ h3 {
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 9;
+  z-index:1;
   padding: 65px 70px 70px 65px;
   right: 20%;
   max-width: 460px;
@@ -2341,6 +2368,9 @@ h3 {
   /* line 30, ../../Arafath/CL/December/236. Event-02/HTML/scss/_map.scss */
   .map_area .location_information .info_wrap .single_info {
     display: block;
+  }
+  .map_area .location_information{
+    display:none;
   }
 }
 
@@ -5762,11 +5792,126 @@ h6 {
     margin-right: 10px;
   }
 }
+.reach{
+  text-align: center;
+  background-color: black;
+  color: #FF4533;
+  margin: 0;
+}
+.reach h2{
 
+  color: #FF4533;
+  margin: 0;
+}
 /* line 166, ../../Arafath/CL/December/236. Event-02/HTML/scss/_blog_part.scss */
 .blog_part .single-home-blog .card ul li span {
   margin-right: 10px;
   font-size: 12px;
+}
+
+.place-card-large{
+  z-index: 99999;
+}
+.timeline {
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+  padding: 20px 0;
+  margin: 0 auto;
+  border-left: 4px solid #FF4533;
+}
+
+.timeline-event {
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 50px;
+}
+
+.timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #3498db;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  transform: translateY(0);
+}
+
+.timeline-content {
+  background: linear-gradient(135deg, #333333, #444444);
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-date {
+  font-size: 18px;
+  color: #ecf0f1;
+  margin-bottom: 10px;
+}
+
+.timeline-title {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #FF4533;
+}
+
+.timeline-description {
+  font-size: 16px;
+  color: #bdc3c7;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: linear-gradient(180deg, #3498db, #FF4533);
+  border-radius: 4px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+      width: 95%;
+      padding-left: 10px;
+  }
+  
+  .timeline-content {
+      font-size: 14px;
+      padding: 10px;
+  }
+  
+  .timeline-icon {
+      width: 16px;
+      height: 16px;
+  }
+  
+  .timeline-date {
+      font-size: 16px;
+  }
+  
+  .timeline-title {
+      font-size: 18px;
+  }
+  
+  .timeline-description {
+      font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
