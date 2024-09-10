@@ -20,69 +20,97 @@
    <link rel="stylesheet" href="css/animate.css">
    <link rel="stylesheet" href="css/flaticon.css">
    <link rel="stylesheet" href="css/slicknav.css">
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Custom styles for accordion */
+        .accordion .card {
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .accordion .card-header {
+            background-color: #FF4533;
+            color: white;
+            border-radius: 10px;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion .btn-link {
+            color: white;
+            text-decoration: none;
+            flex-grow: 1;
+            text-align: left;
+        }
+        .accordion .collapse {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
+        }
+        .accordion .dropdown-icon {
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 
 <body>
    
-   <header>
-       <div class="header-area ">
-           <div id="sticky-header" class="main-header-area">
-               <div class="container">
-                   <div class="header_bottom_border">
-                       <div class="row align-items-center">
-                           <div class="col-xl-3 col-lg-3">
-                               <div class="logo">
-                                   <a href="index.html">
-                                       <!--<img src="img/logo.png" alt="">-->
-                                       <p style="font-weight: bolder;font-size: 1.3em;">Engenuity Expo</p>
-                                   </a>
-                               </div>
-                           </div>
-                           <div class="col-xl-6 col-lg-6">
-                               <div class="main-menu  d-none d-lg-block">
-                                   <nav>
-                                       <ul id="navigation">
-                                           <li><a href="index.html">home</a></li>
-                                           <li><a href="#">About</a></li>
-                                           
-                                           <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                               <ul class="submenu">
-                                                   <li><a href="">about</a></li>
-                                                   <li><a href="">home</a></li>
-                                                   <li><a href="">Program</a></li>
-                                                   
-                                               </ul>
-                                           </li>
-                                           <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                               <ul class="submenu">
-                                                   <li><a href="">blog</a></li>
-                                                   <li><a href="">single-blog</a></li>
-                                               </ul>
-                                           </li>
-                                           <li><a href="contact.html">Contact</a></li>
-                                       </ul>
-                                   </nav>
-                               </div>
-                           </div>
-                           <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                               <div class="buy_tkt">
-                                   <div class="book_btn d-none d-lg-block">
-                                       <a href="#">Register Now!!!</a>
-                                   </div>
-                               </div>
-                           </div>
-                           <div class="col-12">
-                               <div class="mobile_menu d-block d-lg-none"></div>
-                           </div>
-                       </div>
-                   </div>
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-3">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="img/logo.jpg" width="150px" height=""alt="">
+                                        <!-- <p style="font-weight: bolder;font-size: 1.3em;">Engenuity Expo</p> -->
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">home</a></li>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="./problem-statements.html">Problems Statements</a></li>
 
-               </div>
-           </div>
-       </div>
-   </header>
+                                           <!--
+                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    <li><a href="">blog</a></li>
+                                                    <li><a href="">single-blog</a></li>
+                                                </ul>
+                                            </li>-->
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="buy_tkt">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a href="#">Register Now!!!</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- header-end -->
  
     <!-- bradcam_area -->
@@ -108,48 +136,12 @@
     <!-- bradcam_area end -->
 
     <!--================Problem Statements Area =================-->
-    <section class="blog_area single-post-area section-padding">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-8 posts-list">
-               <!-- Problem Statement 1 -->
-               <div class="single-post">
-                  <div class="blog_details">
-                     <h2>Problem Statement 1: Reduce Food Waste Using AI</h2>
-                     <p class="excert">
-                        Create an innovative solution leveraging AI technology to minimize food waste. Your solution should focus on predictive analytics, optimizing supply chains, or enhancing food distribution networks.
-                     </p>
-                  </div>
-               </div>
-               <!-- Problem Statement 2 -->
-               <div class="single-post">
-                  <div class="blog_details">
-                     <h2>Problem Statement 2: Mobile App for Mental Health Management</h2>
-                     <p class="excert">
-                        Develop a mobile application that helps users manage their mental health. The app could include features like mood tracking, guided meditations, and access to mental health resources.
-                     </p>
-                  </div>
-               </div>
-               <!-- Problem Statement 3 -->
-               <div class="single-post">
-                  <div class="blog_details">
-                     <h2>Problem Statement 3: Remote Education Platform for Rural Areas</h2>
-                     <p class="excert">
-                        Design a platform that facilitates remote education in rural areas with limited internet access. Consider using offline capabilities, low-bandwidth content delivery, and community-driven content creation.
-                     </p>
-                  </div>
-               </div>
-               <!-- Add more problem statements as needed -->
-            </div>
-            <div class="col-lg-4">
-               <!-- Sidebar content can remain as is, or you can replace it with hackathon-related information -->
-               <div class="blog_right_sidebar">
-                  <!-- Remove the categories section -->
-               </div>
-            </div>
-         </div>
-      </div>
-    </section>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Engenuity Expo 2024 - Problem Statements</h2>
+        <div id="accordion" class="accordion">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </div>
     <!--================ Problem Statements Area end =================-->
     <footer class="footer">
         <div class="copy-right_text">
@@ -164,35 +156,76 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        // The JSON data as a variable
+        const datafile = [
+            {
+                "title": "Smart Energy Management System",
+                "description": "Develop a smart energy management system that optimizes power consumption across multiple devices. The solution should reduce energy wastage while ensuring user convenience."
+            },
+            {
+                "title": "AI-Powered Healthcare Assistant",
+                "description": "Create an AI-powered healthcare assistant that helps in monitoring patient health, offering personalized recommendations, and assisting in remote diagnostics."
+            },
+            {
+                "title": "Sustainable Urban Mobility",
+                "description": "Design a sustainable urban mobility solution that reduces traffic congestion and pollution while improving the efficiency of public transport systems."
+            }
+        ];
+    
+        // Dynamically create the accordion
+        const accordion = document.getElementById('accordion');
+        datafile.forEach((item, index) => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+    
+            const cardHeader = document.createElement('div');
+            cardHeader.classList.add('card-header');
+            cardHeader.id = `heading${index}`;
+    
+            const h5 = document.createElement('h5');
+            h5.classList.add('mb-0');
+    
+            const button = document.createElement('button');
+            button.classList.add('btn', 'btn-link', 'collapsed');
+            button.setAttribute('data-toggle', 'collapse');
+            button.setAttribute('data-target', `#collapse${index}`);
+            button.setAttribute('aria-expanded', 'false');
+            button.setAttribute('aria-controls', `collapse${index}`);
+            button.innerHTML = `${item.title} <span class="dropdown-icon">&#9660;</span>`;
+    
+            h5.appendChild(button);
+            cardHeader.appendChild(h5);
+            card.appendChild(cardHeader);
+    
+            const collapse = document.createElement('div');
+            collapse.id = `collapse${index}`;
+            collapse.classList.add('collapse');
+            if (index === 0) {
+                collapse.classList.add('show'); // Automatically open the first accordion
+            }
+            collapse.setAttribute('aria-labelledby', `heading${index}`);
+            collapse.setAttribute('data-parent', '#accordion');
+    
+            const cardBody = document.createElement('div');
+            cardBody.classList.add('card-body');
+            cardBody.textContent = item.description;
+    
+            collapse.appendChild(cardBody);
+            card.appendChild(collapse);
+    
+            accordion.appendChild(card);
+        });
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/scrollIt.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/gijgo.min.js"></script>
+    <script src="js/popper.min.js
 
-    <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
-
-    <script src="js/main.js"></script>
-
-</body>
-
-</html>
